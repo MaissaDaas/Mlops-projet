@@ -3,53 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Price Predictor</title>
+    <title>Home Price Estimator</title>
+    <link rel="icon" href="/static/image1.png" type="image/x-icon">
     <link rel="stylesheet" href="/static/style.css">
     <script src="/static/predict.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <header>
+            <img src="/static/image1.png" alt="">
             <h1>Home Price Estimator</h1>
         </header>
         <main>
             <form id="predictionForm">
-                <div class="input-group">
-                    <label for="MedInc">Median Income:</label>
-                    <input type="text" id="MedInc" name="MedInc" placeholder="Median Income" required>
+
+                <div class="add__inputs">
+                    <div class="add__box">
+                        <h3 class="add_h" for="MedInc">Median Income</h3>
+                        <input type="text" required class="add__input" id="MedInc" name="MedInc" placeholder="Median Income" >
+                    </div>
+                    <div class="add__box">
+                        <h3 class="add_h" for="HouseAge">House Age</h3>
+                        <input type="text" required class="add__input" id="HouseAge" name="HouseAge" placeholder="House Age">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="HouseAge">House Age:</label>
-                    <input type="text" id="HouseAge" name="HouseAge" placeholder="House Age" required>
+
+                <div class="add__inputs">
+                    <div class="add__box">
+                        <h3 class="add_h" for="AveRooms">Average Rooms</h3>
+                        <input type="text" required class="add__input" id="AveRooms" name="AveRooms" placeholder="Average Rooms" >
+                    </div>
+                    <div class="add__box">
+                        <h3 class="add_h" for="AveBedrms">Average Bedrooms</h3>
+                        <input type="text" required class="add__input" id="AveBedrms" name="AveBedrms" placeholder="Average Bedrooms">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="AveRooms">Average Rooms:</label>
-                    <input type="text" id="AveRooms" name="AveRooms" placeholder="Average Rooms" required>
+
+                <div class="add__inputs">
+                    <div class="add__box">
+                        <h3 class="add_h" for="Population">Population</h3>
+                        <input type="text" required class="add__input" id="Population" name="Population" placeholder="Population" >
+                    </div>
+                    <div class="add__box">
+                        <h3 class="add_h" for="AveOccup">Average Occupancy</h3>
+                        <input type="text" required class="add__input" id="AveOccup" name="AveOccup" placeholder="Average Occupancy">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="AveBedrms">Average Bedrooms:</label>
-                    <input type="text" id="AveBedrms" name="AveBedrms" placeholder="Average Bedrooms" required>
+
+                <div class="add__inputs">
+                    <div class="add__box">
+                        <h3 class="add_h" for="Latitude">Latitude</h3>
+                        <input type="text" required class="add__input" id="Latitude" name="Latitude" placeholder="Latitude">
+                    </div>
+                    <div class="add__box">
+                        <h3 class="add_h" for="Longitude">Longitude</h3>
+                        <input type="text" required class="add__input" id="Longitude" name="Longitude" placeholder="Longitude">
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="Population">Population:</label>
-                    <input type="text" id="Population" name="Population" placeholder="Population" required>
-                </div>
-                <div class="input-group">
-                    <label for="AveOccup">Average Occupancy:</label>
-                    <input type="text" id="AveOccup" name="AveOccup" placeholder="Average Occupancy" required>
-                </div>
-                <div class="input-group">
-                    <label for="Latitude">Latitude:</label>
-                    <input type="text" id="Latitude" name="Latitude" placeholder="Latitude" required>
-                </div>
-                <div class="input-group">
-                    <label for="Longitude">Longitude:</label>
-                    <input type="text" id="Longitude" name="Longitude" placeholder="Longitude" required>
-                </div>
+
                 <div class="submit-btn">
                     <button type="submit">Predict</button>
                 </div>
+
             </form>
+
             <div id="predictionResult" class="prediction-result"></div>
         </main>
     </div>

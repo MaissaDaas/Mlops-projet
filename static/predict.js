@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
         // });
     
         formData.forEach(function(value, key) {
-            var numericValue = parseFloat(value);  // Convertir la valeur en nombre
-            if (!isNaN(numericValue)) {  // Vérifier si la valeur est un nombre
-                requestData[key] = -numericValue;  // Appliquer la négation
+            var numericValue = parseFloat(value);  
+            if (!isNaN(numericValue)) {  
+                requestData[key] = -numericValue;  
             } else {
-                requestData[key] = value;  // Si ce n'est pas un nombre, garder la valeur d'origine
+                requestData[key] = value;  
             }
         });
 
